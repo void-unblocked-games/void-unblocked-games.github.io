@@ -43,7 +43,7 @@
   // Update the background color every 10 milliseconds
   setInterval(() => {
     // Calculate the new background color based on a sin function
-    const color = Math.round(191 + 64 * Math.sin(Date.now() / 1000));
+    const color = Math.round(64 * Math.sin(Date.now() / 8000));
 
     // Set the new background color
     body.style.backgroundColor = `rgb(${color}, ${color}, ${color})`;
