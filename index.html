@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Void Games</title>
+  </head>
+  <body>
+    <div class="title-screen">
+      <h1>Void Games</h1>
+      <h3>nice and tasty</h3>
+    </div>
+  </body>
+<style>
+  body {
+    background-color: #f5f5f5;
+  }
+  .title-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .title-screen h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px #333333;
+  }
+
+  .title-screen p {
+    font-size: 2rem;
+    margin-top: 0;
+    color: white;
+    text-shadow: 2px 2px #333333;
+  }
+</style>
+<script>
+  // Get the body element
+  const body = document.querySelector("body");
+
+  // Update the background color every 10 milliseconds
+  setInterval(() => {
+    // Calculate the new background color based on a sin function
+    const color = Math.round(127 + 127 * Math.sin(Date.now() / 1000));
+
+    // Set the new background color
+    body.style.backgroundColor = `rgb(${color}, ${color}, ${color})`;
+  }, 10);
+</script>
+</html>
