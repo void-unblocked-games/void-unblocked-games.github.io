@@ -8,6 +8,7 @@
     <div class="title-screen">
       <h1>Void Games</h1>
       <h3>nice and tasty</h3>
+      <button class="fancy-button">Look at games catalog</button>
     </div>
   </body>
 <style>
@@ -35,18 +36,28 @@
     color: white;
     text-shadow: 2px 2px #333333;
   }
+  .fancy-button {
+    background-color: #4CAF50; /* Set the background color */
+    border: none; /* Remove the border */
+    color: white; /* Set the font color */
+    padding: 15px 32px; /* Set the button padding */
+    text-align: center; /* Center the text horizontally */
+    text-decoration: none; /* Remove the underline */
+    display: inline-block; /* Display the button as an inline-block element */
+    font-size: 16px; /* Set the font size */
+    margin: 4px 2px; /* Add some margin between buttons */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    border-radius: 25px; /* Add rounded corners to the button */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a shadow effect to the button */
+    transition: all 0.3s ease 0s; /* Add a smooth transition effect on hover */
+  }
+
+  .fancy-button:hover {
+    background-color: #3e8e41; /* Change the background color on hover */
+    box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.4); /* Increase the shadow effect on hover */
+  }
+
 </style>
 <script>
-  // Get the body element
-  const body = document.querySelector("body");
-
-  // Update the background color every 10 milliseconds
-  setInterval(() => {
-    // Calculate the new background color based on a sin function
-    const color = Math.round(64 * Math.sin(Date.now() / 8000));
-
-    // Set the new background color
-    body.style.backgroundColor = `rgb(${color}, ${color}, ${color})`;
-  }, 10);
 </script>
 </html>
